@@ -4,14 +4,12 @@ import { useState } from 'react'
 
 export function Like() {
   const [like, setLike] = useState(() => 0)
-  function incrementLike() {
-    setLike((state) => state + 1)
-  }
+  function incrementLike() {}
   return (
     <LikeContainer>
       <button onClick={incrementLike}>
         <ThumbsUp size={20} />
-        <span className="spacer">{like}</span>
+        <span className="spacer">0</span>
       </button>
     </LikeContainer>
   )

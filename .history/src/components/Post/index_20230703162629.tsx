@@ -14,7 +14,7 @@ export function Post() {
   const [comment, setComment] = useState('')
   function handleComment(e: any) {
     const value = e.target.value
-    setComment(value)
+    setComment((state) => (state = e.target.value))
     console.log(comment)
   }
   return (

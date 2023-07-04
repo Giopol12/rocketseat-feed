@@ -11,11 +11,9 @@ import fotoPerfil from '../../assets/foto.jpg'
 import { useState } from 'react'
 
 export function Post() {
-  const [comment, setComment] = useState('')
-  function handleComment(e: any) {
-    const value = e.target.value
-    setComment(value)
-    console.log(comment)
+  const [comment, setComment] = useState()
+  function handleComment(e) {
+    setComment(e.target.value)
   }
   return (
     <PublishedPostsContainer>
@@ -40,13 +38,10 @@ export function Post() {
       </PostContainer>
       <CommentContainer>
         <strong>Deixe seu feedback</strong>
-        <textarea
-          onChange={handleComment}
-          placeholder="Escreva um comentário..."
-        />
-        <button>Publicar</button>
+        <textarea placeholder="Escreva um comentário..." />
+        <button onClick={handleComment}>Publicar</button>
       </CommentContainer>
-      <Comment />
+      <Comment content={comment} />
     </PublishedPostsContainer>
   )
 }

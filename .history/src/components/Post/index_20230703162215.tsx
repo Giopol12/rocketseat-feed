@@ -11,11 +11,9 @@ import fotoPerfil from '../../assets/foto.jpg'
 import { useState } from 'react'
 
 export function Post() {
-  const [comment, setComment] = useState('')
-  function handleComment(e: any) {
-    const value = e.target.value
-    setComment(value)
-    console.log(comment)
+  const [comment, setComment] = useState()
+  function handleComment(e: string) {
+    setComment(e)
   }
   return (
     <PublishedPostsContainer>

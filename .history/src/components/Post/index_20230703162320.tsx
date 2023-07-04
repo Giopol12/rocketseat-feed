@@ -12,10 +12,8 @@ import { useState } from 'react'
 
 export function Post() {
   const [comment, setComment] = useState('')
-  function handleComment(e: any) {
-    const value = e.target.value
-    setComment(value)
-    console.log(comment)
+  function handleComment(e: string) {
+    setComment(e.target.value)
   }
   return (
     <PublishedPostsContainer>

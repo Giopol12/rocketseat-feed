@@ -8,15 +8,8 @@ import {
 } from './styled'
 import { Comment } from '../Comment'
 import fotoPerfil from '../../assets/foto.jpg'
-import { useState } from 'react'
 
 export function Post() {
-  const [comment, setComment] = useState('')
-  function handleComment(e: any) {
-    const value = e.target.value
-    setComment(value)
-    console.log(comment)
-  }
   return (
     <PublishedPostsContainer>
       <PostDetailsContainer>
@@ -40,10 +33,7 @@ export function Post() {
       </PostContainer>
       <CommentContainer>
         <strong>Deixe seu feedback</strong>
-        <textarea
-          onChange={handleComment}
-          placeholder="Escreva um comentário..."
-        />
+        <textarea placeholder="Escreva um comentário..." />
         <button>Publicar</button>
       </CommentContainer>
       <Comment />

@@ -11,7 +11,7 @@ export function Like() {
     <LikeContainer>
       <button onClick={incrementLike}>
         <ThumbsUp size={20} />
-        <span className="spacer">{like}</span>
+        <span className="spacer">like</span>
       </button>
     </LikeContainer>
   )
